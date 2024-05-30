@@ -6,3 +6,5 @@ appsettings.json
 *.db
 wwwroot
 publish
+/API/appsettings.Development.json
+/.vs/

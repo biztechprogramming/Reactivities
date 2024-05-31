@@ -56,7 +56,7 @@ namespace Application.Activities
           Title = request.Title,
           Description = request.Description,
           Category = request.Category,
-          Date = request.Date,
+          Date = request.Date.ToUniversalTime(),
           City = request.City,
           Venue = request.Venue
         };
@@ -71,7 +71,7 @@ namespace Application.Activities
           AppUser = user,
           Activity = activity,
           IsHost = true,
-          DateJoined = DateTime.Now
+          DateJoined = DateTime.Now.ToUniversalTime()
         };
 
         _context.UserActivities.Add(attendee);

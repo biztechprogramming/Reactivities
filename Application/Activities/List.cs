@@ -54,7 +54,7 @@ namespace Application.Activities
       public async Task<ActivitiesEnvelope> Handle(Query request, CancellationToken cancellationToken)
       {
         var queryable = _context.Activities
-          .Where(x => x.Date >= request.StartDate)
+          .Where(x => x.Date >= request.StartDate.Value.ToUniversalTime())
           .OrderBy(x => x.Date)
           .AsQueryable();
 

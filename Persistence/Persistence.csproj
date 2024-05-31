@@ -1,5 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
+    <Compile Remove="Migrations\20200413114201_Migrations For SqlServer.cs" />
+    <Compile Remove="Migrations\20200413114201_Migrations For SqlServer.Designer.cs" />
+    <Compile Remove="Migrations\MigrationsForPostgres.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
